@@ -15,12 +15,21 @@ public class GamaManager : MonoBehaviour {
     private int wallNo;
 
     // Use this for initialization
-    void Start () {
+    void Start() {
         wallNo = WALL_FRONT;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-}
+    }
+
+
+    // Update is called once per frame
+    void Update(){
+    }
+
+    public void PushButtonRight() {
+     wallNo++;
+     if (wallNo > WALL_LEFT) {
+         wallNo = WALL_FRONT;
+     }
+     Displaywall();
+    } 
+
+ }
